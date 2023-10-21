@@ -112,15 +112,17 @@ player2controls = gamefunc.ControlMap(2, pygame.K_UP, pygame.K_DOWN, pygame.K_LE
 paddle1 = Player("Player1",player1controls, 32,160,16,300, gamefunc.white, 300)
 paddle2 = Player("Player2",player2controls, 32,160,gamefunc.WIDTH - 16,300, gamefunc.white, 300)
 
-ball = Ball("Ball",32,32,gamefunc.WIDTH / 2, gamefunc.HEIGHT / 2, gamefunc.white, 500)
+ball = Ball("Ball",32,32,gamefunc.WIDTH / 2, gamefunc.HEIGHT / 2, gamefunc.white, 600)
 
-global scoreFont
-global displayp1score
-global displayp2score
-global displayp1scorerect
-global displayp2scorerect
 
 def init():
+    global scoreFont
+    global displayp1score
+    global displayp2score
+    global displayp1scorerect
+    global displayp2scorerect
+    global p1Score
+    global p2Score
     p1Score = 0
     p2Score = 0
     scoreFont = pygame.font.Font('RobotoBold-Xdoj.ttf', 32)

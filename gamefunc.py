@@ -17,6 +17,14 @@ clock = pygame.time.Clock()
 def deltaTime():
     return clock.get_time() / 1000
 
+def fpsDisplay(screen):
+    fpsFont = pygame.font.Font('RobotoBold-Xdoj.ttf', 16)
+    fpsText = fpsFont.render('FPS', True, green)
+    fpsTextRect = fpsText.get_rect()
+    fpsText = fpsFont.render(str(int(clock.get_fps())), True, green)
+    # fpsText = font.render(str(pygame.time.Clock.get_time(clock)),True,green,blue)
+    screen.blit(fpsText, fpsTextRect)
+
 class Entity(pygame.sprite.Sprite):
     def __init__(self, name, width, height, posX, posY, colour):
         super().__init__()
